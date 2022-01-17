@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>youtube-dl-web</title>
+        <link rel="icon" type="image/jpg" href="https://lh3.googleusercontent.com/fife/AAWUweW5gcAXow9n9Yy3hQxCE5t2xgKveyJy0zBWN-wMm1k3FY9rtKozt1FAhJGBuHyUT9XYFoanNrBd_sh5ibvC8FRm-7hG2E9xAJQWUdcZF3ERboM6HonTkMAhITaj12nuDUwk1d5gKAzGdo4TCV84uFuKeGvGk97ToKjvjLUg6L9AA0TkBabW41Z_1Gnqp6fBsa_24F2KchlbkEMrRx6P2MhfuMhIvPITuPUVr7Zjf-cXxcbzgclPctfEGrFxH0GLXcPcJan96CX5GjPVdVzj35l8vt9uiDE8PCieWpH9Gl2LMDM3AcKnkHYZlFK_VkSr7gu_0UNfThRMXtIRRbvEnNHrEcpsvfdy6qzY9vCv8EJ51ohGPA4BiYgq0VvUfT1zBhJtVqBnZe2i7mIkFzZZw5sfpel2URAxKZNXEC_gPFlgwcjzj32k7dG9RI09kJ5rhcSufNfmuS5w1WyVRpV-EsDNK6SWFlOsqTUvdGS4fCkIPcWT8fQA74T7sSTUN_wXp37u5s9QJEX6MfENRSunbjtaDX-Qny139wNxSqeOjkFvdEHwG4NyJBjr8-OYPgS1VsG3z_xIUMSC_wGI-sxpVoPmWiNKiyybLfduROR02QrGg8adM9yknv0GKXq-kMaEAgrmLHEQYfwwI78rfMkyIN_ebZJ6M0PRXRfzefT8BfuG4aVzVOAibxHr15QWAxeNdeXPG9OWcvCo6EOz09LpMB_gSa87ED5Oag=w32-h32" />
+    </head>
+    <body style="font-size: 2em; font-family: Roboto, Nunito, Lato; padding: 2em 7em; text-align: center;">
+        <div>
+            <img src="https://lh3.googleusercontent.com/fife/AAWUweW5gcAXow9n9Yy3hQxCE5t2xgKveyJy0zBWN-wMm1k3FY9rtKozt1FAhJGBuHyUT9XYFoanNrBd_sh5ibvC8FRm-7hG2E9xAJQWUdcZF3ERboM6HonTkMAhITaj12nuDUwk1d5gKAzGdo4TCV84uFuKeGvGk97ToKjvjLUg6L9AA0TkBabW41Z_1Gnqp6fBsa_24F2KchlbkEMrRx6P2MhfuMhIvPITuPUVr7Zjf-cXxcbzgclPctfEGrFxH0GLXcPcJan96CX5GjPVdVzj35l8vt9uiDE8PCieWpH9Gl2LMDM3AcKnkHYZlFK_VkSr7gu_0UNfThRMXtIRRbvEnNHrEcpsvfdy6qzY9vCv8EJ51ohGPA4BiYgq0VvUfT1zBhJtVqBnZe2i7mIkFzZZw5sfpel2URAxKZNXEC_gPFlgwcjzj32k7dG9RI09kJ5rhcSufNfmuS5w1WyVRpV-EsDNK6SWFlOsqTUvdGS4fCkIPcWT8fQA74T7sSTUN_wXp37u5s9QJEX6MfENRSunbjtaDX-Qny139wNxSqeOjkFvdEHwG4NyJBjr8-OYPgS1VsG3z_xIUMSC_wGI-sxpVoPmWiNKiyybLfduROR02QrGg8adM9yknv0GKXq-kMaEAgrmLHEQYfwwI78rfMkyIN_ebZJ6M0PRXRfzefT8BfuG4aVzVOAibxHr15QWAxeNdeXPG9OWcvCo6EOz09LpMB_gSa87ED5Oag=w1440-h2423-ft" style="max-height: 10em; padding: 1em;" />
+        </div>
+        <div>
+            <form action="download" method="GET" style="background: #111; padding: 2em; border-radius: 0.2em;">
+                <input type="text"name="id" style="font-size: 1em; border-radius: 0.1em;" />
+                <span style="border-style: solid; border-width: 2px; border-color: white; border-radius: 0.2em;">
+                    <input type="checkbox" name="audio" />
+                    <label for="audio" style="" style="font-size: 1em">🎧</label>
+                </span>
+                <input type="submit" style="font-size: 1em; margin-left: 0.5em; border-radius: 0.15em;" />
+            </form>
+        </div>
+        <div style="text-align: left">
+            <table style="font-size: 0.8em;">
+                <% for ( var i = 0; i < downloads.length; i++ ) { %>
+                    <tr>
+                        <td style="padding: 1em;">
+                            <a href="https://youtu.be/<%= downloads[i].id %>" target="_blank">
+                                <%= downloads[i].name || '???' %>
+                            </a>
+                        </td>
+                    </tr>
+                <% } %>
+            </table>
+        </div>
+    </body>
+</html>
